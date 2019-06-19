@@ -14,5 +14,19 @@
           </div>
 	</div>
 
+  <div>
+    <p>Please enter currency to convert to</p>
+    <select v-model="currencyConvert">
+    <option v-for="(rate, country) in currencies.rates">
+    {{ country }}: {{ rate }}
+    </option>
+    </select>
+  </div>
+
+  <div>
+    <p>Please enter amount</p>
+    <input type="number" v-model.number="amount">
+  </div>
+
 </body>
 </html>
